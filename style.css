@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+  font-family: 'Karla', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'DM Serif Display', serif;
+	font-weight: 400;
+}
+
+/*********************/
+
+.content {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+header .content {
+	display: flex;
+	justify-content: space-between;	
+	padding: 20px 0;
+}
+
+.main-menu ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.main-menu ul li {
+	text-transform: uppercase;
+}
+
+.main-menu ul li a {
+	color: hsl(273, 4%, 51%); /*Dark Grayish Violet*/
+	text-decoration: none;
+	padding: 7px 15px;
+	font-size: 1.3rem;
+}
+
+.main-menu ul li a:hover {
+	color: hsl(270, 9%, 17%); /*Very Dark Violet*/
+}
+
+.main-menu ul li a.button {
+	color: hsl(270, 9%, 17%);
+	border: 1px solid hsl(270, 9%, 17%);
+	margin-left: 20px;
+}
+
+.main-menu ul li a.button:hover {
+	color: #fff;
+	background-color: hsl(270, 9%, 17%);
+}
+
+.hero {
+	background-color: hsl(256, 26%, 20%);
+}
+
+.hero .content {
+	position: relative;
+	padding: 90px 0;
+}
+
+.hero .content h1 {
+	font-size: 7.0rem;
+	max-width: 530px;
+	color:hsl(0, 0%, 98%);
+	line-height: 0.9;
+}
+
+.hero .content h1::before {
+	content: '';
+	display: block;	
+	background-color: hsl(0, 0%, 98%);
+	height: 1px;
+	width: 140px;
+	margin-bottom: 50px;
+}
+
+.hero .content p {
+	color:hsl(0, 0%, 98%);
+	max-width: 600px;
+	margin: 30px 0;
+}
+
+.hero .content a {
+	color:hsl(0, 0%, 98%);
+	border: 1px solid hsl(0, 0%, 98%);
+	text-decoration: none;
+	padding: 7px 15px;
+	display: block;
+	width: fit-content;
+}
+
+.hero .content img {
+	position: absolute;
+	top: 90px;
+	right: 0;
+}
+
+

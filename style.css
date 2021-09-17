@@ -194,4 +194,62 @@ header .content {
 
 footer {
 	background: hsl(0, 0%, 98%);
+	padding: 50px 0 40px 0;
+}
+
+footer .top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid hsl(273, 4%, 51%);
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+footer .social-links a {
+	display: inline-block;
+	margin-left: 15px;
+}
+
+footer .social-links a svg {
+	transform: scale(.85);
+}
+
+footer .social-links a:hover svg path {
+	fill: hsl(256, 26%, 20%);
+}
+
+footer .menu-group {
+	display: flex;
+}
+
+footer .menu-item {
+	width: 25%;
+	text-transform: uppercase;
+}
+
+footer .menu-item h4 {
+	font-family: 'Karla', sans-serif;
+	color: hsl(273, 4%, 51%);
+	font-size: 1.3rem;
+	margin: 15px 0 25px 0;
+}
+
+footer .menu-item ul {
+	font-size: 1.2rem;
+	list-style: none;
+}
+
+footer .menu-item ul li{
+	margin-bottom: 10px;
+}
+
+footer .menu-item ul a:link,
+footer .menu-item ul a:visited {
+	text-decoration: none;
+	color: hsl(256, 26%, 20%);
+}
+
+footer .menu-item ul a:hover {
+	text-decoration: underline;
 }

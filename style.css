@@ -55,7 +55,12 @@ h1, h2, h3, h4, h5, h6 {
 header .content {
 	display: flex;
 	justify-content: space-between;	
-	padding: 20px 0;
+	align-items: center;
+	padding: 20px 10px;
+}
+
+header .content .logo {
+	max-height: 18px;
 }
 
 .main-menu ul {
@@ -83,6 +88,11 @@ header .content {
 	margin-left: 15px;
 }
 
+header .content .icon-hamburger,
+header .content .icon-close {
+	display: none;
+}
+
 .hero {
 	background-color: hsl(256, 26%, 20%);
 	position: relative;
@@ -102,12 +112,11 @@ header .content {
 
 .hero .content {
 	position: relative;
-	padding: 90px 0;
+	padding: 90px 10px;
 }
 
 .hero .content h1 {
 	font-size: 7.0rem;
-	max-width: 530px;
 	color:hsl(0, 0%, 98%);
 	line-height: 0.9;
 }
@@ -123,7 +132,7 @@ header .content {
 
 .hero .content p {
 	color:hsl(0, 0%, 98%);
-	max-width: 600px;
+	max-width: 50%;
 	margin: 30px 0;
 }
 
@@ -136,7 +145,7 @@ header .content {
 .hero .content img {
 	position: absolute;
 	top: 90px;
-	right: 0;
+	right: 10px;
 	max-height: 560px;
 }
 
@@ -144,9 +153,12 @@ header .content {
 	margin-top: 210px;
 }
 
+.benefits .content {
+	padding: 0 10px;
+}
+
 .benefits .content h2 {
 	font-size: 6.2rem;
-	max-width: 530px;
 	color: hsl(270, 9%, 17%);
 	line-height: 0.9;
 }
@@ -191,12 +203,11 @@ header .content {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: hsl(256, 26%, 20%) url(images/bg-pattern-how-we-work-desktop.svg) 100% 0 no-repeat;
+	background: hsl(256, 26%, 20%) url('images/bg-pattern-how-we-work-desktop.svg') 100% 0 no-repeat;
 }
 
 .about-us .content h2 { 
 	font-size: 5.6rem;
-	max-width: 50%;
 	color: hsl(0, 0%, 98%);
 	line-height: 0.9;
 }
@@ -210,6 +221,10 @@ footer {
 		hsl(0, 0%, 98%) 
 		url('images/bg-pattern-footer-desktop.svg') 0 0 no-repeat;
 	padding: 50px 0 40px 0;
+}
+
+footer .content {
+	padding: 0 10px;
 }
 
 footer .top {
@@ -236,6 +251,7 @@ footer .social-links a:hover svg path {
 
 footer .menu-group {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 footer .menu-item {

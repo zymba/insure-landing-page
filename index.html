@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap" rel="stylesheet">
 	
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
 
 	<title>Frontend Mentor | Insure landing page</title>
 </head>
@@ -18,9 +19,9 @@
 <body>
 	<header>
 		<div class="content">
-			<img src="images/logo.svg" alt="Insure logo">
+			<img src="images/logo.svg" alt="Insure logo" class="logo">
 		
-			<nav class="main-menu">
+			<nav class="main-menu" id="main-menu">
 				<ul>
 					<li><a href="#" class="link">How we work</a></li>
 					<li><a href="#" class="link">Blog</a></li>
@@ -28,12 +29,15 @@
 					<li><a href="#" class="button button--dark">View plans</a></li>
 				</ul>
 			</nav>
+			
+			<img src="images/icon-hamburger.svg" alt="icon hamburger" class="icon-hamburger" id="icon-hamburger" onclick="toggleMenu()">
+			<img src="images/icon-close.svg" alt="icon close" class="icon-close hide" id="icon-close" onclick="toggleMenu()">
 		</div>
 	</header>
 
 	<section class="hero">
 		<div class="content">
-			<h1>Humanizing your insurance.</h1>
+			<h1>Humanizing <br> your insurance.</h1>
 			<p>
 				Get your life insurance coverage easier and faster. We blend our expertise
 				and technology to help you find the plan that’s right for you. Ensure you
@@ -41,7 +45,10 @@
 			</p>
 			<a href="#" class="button button--light">View plans</a>
 
-			<img src="images/image-intro-desktop.jpg" alt="Intro image">
+			<picture>
+				<source media="(max-width: 640px)" srcset="images/image-intro-mobile.jpg">
+				<img src="images/image-intro-desktop.jpg" alt="Intro image" class="hero-img">
+			</picture>
 		</div>
 	</section>
 	
@@ -143,18 +150,34 @@
 		</div>
 	</footer>
 
+	<script>
+		function toggleMenu() {
+			const menu = document.querySelector('#main-menu')
+			if (menu.className === 'main-menu') {
+				menu.className += ' responsive'
+			} else {
+				menu.className = 'main-menu'
+			}
+
+			const iconHamburger = document.querySelector('#icon-hamburger')
+			if (iconHamburger.className === 'icon-hamburger') {
+				iconHamburger.className += ' hide'
+			} else {
+				iconHamburger.className = 'icon-hamburger'
+			}
+
+			const iconClose = document.querySelector('#icon-close')
+			if (iconClose.className === 'icon-close') {
+				iconClose.className += ' hide'
+			} else {
+				iconClose.className = 'icon-close'
+			}
+		}
+	</script>
+
 	<!-- <div class="attribution">
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 		Coded by <a href="#">Your Name Here</a>.
-	</div> -->
-
-	<!-- <div class="colors">
-		<div style="background-color: hsl(256, 26%, 20%);">- Dark Violet: hsl(256, 26%, 20%)</div>
-		<div style="background-color: hsl(216, 30%, 68%);">- Grayish Blue: hsl(216, 30%, 68%)</div>
-				
-		<div style="background-color: hsl(270, 9%, 17%);">- Very Dark Violet: hsl(270, 9%, 17%)</div>
-		<div style="background-color: hsl(273, 4%, 51%);">- Dark Grayish Violet: hsl(273, 4%, 51%)</div>
-		<div style="background-color: hsl(0, 0%, 98%);">- Very Light Gray: hsl(0, 0%, 98%)</div>
 	</div> -->
 </body>
 

@@ -139,7 +139,7 @@ header .content .icon-close {
 
 .hero .content .button {
 	display: block;
-	width: fit-content;
+	width: max-content;
 	font-size: 1.6rem;
 }
 
